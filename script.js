@@ -102,7 +102,7 @@ async function fetchAssistantReply() {
 
 appendMessage(
   "ai",
-  "Ask me about L'Oréal products, routines, or recommendations.",
+  "Hi there! I am here to help with L'Oréal products, routines, and personalized recommendations. What would you like to explore today?",
 );
 
 /* Handle form submit */
