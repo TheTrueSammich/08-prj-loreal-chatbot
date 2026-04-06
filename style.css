@@ -49,11 +49,11 @@ body {
 }
 
 .chat-window {
-  height: 380px;
+  height: 480px;
   border: 1px solid rgba(17, 17, 17, 0.12);
   border-radius: 28px;
-  padding: 22px;
-  font-size: 18px;
+  padding: 28px;
+  font-size: 19px;
   line-height: 1.5;
   overflow-y: auto;
   background: linear-gradient(
@@ -76,6 +76,7 @@ body {
   padding: 12px 16px;
   border-radius: 20px;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  animation: messageEnter 220ms ease-out both;
 }
 
 .msg.user {
@@ -95,16 +96,16 @@ body {
 /* input row */
 .chat-form {
   display: flex;
-  gap: 12px;
-  margin-top: 18px;
+  gap: 14px;
+  margin-top: 20px;
 }
 
 .chat-form input {
   flex: 1;
-  padding: 14px 16px;
+  padding: 18px 20px;
   border: 1px solid rgba(17, 17, 17, 0.14);
-  border-radius: 18px;
-  font-size: 18px;
+  border-radius: 22px;
+  font-size: 19px;
   font-family:
     "Helvetica Now Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: rgba(255, 255, 255, 0.82);
@@ -120,14 +121,14 @@ body {
 }
 
 .chat-form button {
-  font-size: 18px;
+  font-size: 20px;
   background: linear-gradient(135deg, #111111 0%, #ff003b 100%);
   color: #fff;
   border: none;
-  padding: 12px;
-  width: 52px;
-  height: 52px;
-  border-radius: 16px;
+  padding: 14px;
+  width: 60px;
+  height: 60px;
+  border-radius: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -243,8 +244,8 @@ body {
   }
 
   .chat-window {
-    height: 340px;
-    padding: 18px;
+    height: 380px;
+    padding: 20px;
     border-radius: 24px;
   }
 
@@ -258,5 +259,24 @@ body {
 
   .chat-form input {
     font-size: 16px;
+    padding: 15px 16px;
+  }
+
+  .chat-form button {
+    width: 54px;
+    height: 54px;
+    padding: 12px;
+  }
+}
+
+@keyframes messageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }
